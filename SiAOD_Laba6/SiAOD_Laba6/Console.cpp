@@ -93,19 +93,19 @@ long long Console::computation(int count)
 		}
 		else
 		{
-			if (_machine_a[i] < _machine_b[i] < _machine_c[i])
+			if (_machine_a[i] < _machine_b[i] && _machine_b[i] < _machine_c[i])
 			{
 				result += _machine_a[i];
 				_remaining_time[1] += _machine_a[i];
 				_remaining_time[2] += _machine_a[i];
 			}
-			else if (_machine_b[i] < _machine_a[i] < _machine_c[i])
+			else if (_machine_b[i] < _machine_a[i] && _machine_a[i] < _machine_c[i])
 			{
 				result += _machine_b[i];
 				_remaining_time[0] += _machine_b[i];
 				_remaining_time[2] += _machine_b[i];
 			}
-			else if (_machine_c[i] < _machine_b[i] < _machine_a[i])
+			else if (_machine_c[i] < _machine_b[i] && _machine_b[i] < _machine_a[i])
 			{
 				result += _machine_c[i];
 				_remaining_time[1] += _machine_c[i];
